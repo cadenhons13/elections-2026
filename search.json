@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "North Carolina Election Results",
+    "section": "",
+    "text": "The latest available precinct-level results are from the November 3, 2026 election. The dataset includes 145,861 result rows across all 100 counties.\nDownload the complete CSV\nSource: North Carolina State Board of Elections historical results."
+  },
+  {
+    "objectID": "data.html#preview",
+    "href": "data.html#preview",
+    "title": "North Carolina Election Results",
+    "section": "Preview",
+    "text": "Preview\nThe table below shows the first 10 rows. Download the CSV for the complete dataset.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.2.0\n✔ forcats   1.0.1     ✔ stringr   1.6.0\n✔ ggplot2   4.0.3     ✔ tibble    3.3.1\n✔ lubridate 1.9.5     ✔ tidyr     1.3.2\n✔ purrr     1.2.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(knitr)\n\nread_csv(\"data/nc_election_results_20261103.csv\", show_col_types = FALSE) |&gt;\n  select(County, `Election Date`, `Contest Name`, Choice, `Total Votes`) |&gt;\n  slice_head(n = 10) |&gt;\n  kable()\n\n\n\n\n\n\n\n\n\n\n\nCounty\nElection Date\nContest Name\nChoice\nTotal Votes\n\n\n\n\nGUILFORD\n11/03/2026\nGUILFORD COUNTY LOCAL SALES AND USE TAX REFERENDUM\nAgainst\n112\n\n\nGUILFORD\n11/03/2026\nCITY OF GREENSBORO HOUSING BONDS REFERENDUM\nYes\n165\n\n\nGUILFORD\n11/03/2026\nNC COURT OF APPEALS JUDGE SEAT 03\nChristine Marie Walczyk\n222\n\n\nGUILFORD\n11/03/2026\nNC SUPREME COURT ASSOCIATE JUSTICE SEAT 01\nSarah Stevens\n94\n\n\nGUILFORD\n11/03/2026\nGUILFORD COUNTY BOARD OF COMMISSIONERS AT-LARGE\nGreg Drumwright\n210\n\n\nGUILFORD\n11/03/2026\nGUILFORD SOIL AND WATER CONSERVATION DISTRICT SUPERVISOR\nJeffrey R. Egerton\n54\n\n\nGUILFORD\n11/03/2026\nUS SENATE\nShannon W. Bray\n3\n\n\nGUILFORD\n11/03/2026\nCONSTITUTIONAL AMENDMENT - REQUIRE PHOTO ID FOR VOTING\nAgainst\n122\n\n\nGUILFORD\n11/03/2026\nCONSTITUTIONAL AMENDMENT - PROPERTY TAX LEVY LIMIT\nFor\n160\n\n\nGUILFORD\n11/03/2026\nGUILFORD COUNTY CLERK OF SUPERIOR COURT\nDavid Churchill\n275"
   }
 ]
